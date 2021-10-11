@@ -3,14 +3,14 @@
 # Curriculum Learning
 ## Data preparation for stage1
 Use crop_ips.ipynb or crop_melanoma.ipynb .  
-In ./crop/dataset_(1~5)/train/ ./crop/dataset_(1~5)/val/ data will be stored in numpy format.  
+In *./crop/dataset_(1-5)/train/*  and *./crop/dataset_(1-5)/val/* data will be stored in *numpy* format.  
 
 ## Training for stage1
 Set all necessary parameter values in run.py and train2.py and execute as in the following example/   
-Example : python run.py --mode　train  
+Example : *$ python run.py --mode　train*  
 
 After execution, the model weights will be in the following directory.
-Example : ./ips/unet_patch/unet/size_160/dataset_1/weight/  
+Example : *./ips/unet_patch/unet/size_160/dataset_1/weight/*  
 
 ## Test for stage1
 Use uncertainty_ips.ipynb or uncertainty_melanoma.ipynb to make predicted image, label map, uncertainty map and correctness map.  
@@ -47,6 +47,11 @@ For segmentation evaluation use *python run.py --mode　evaluation*
 For uncertainty evaluation use *evaluate_uncertainty.ipynb*  
 The 5-fold cross-validation results will be *in ./ips/unet_patch/unet/size_160/*  
 Results for individual folds will be in *./ips/unet_patch/unet/size_160/dataset_1~5 * 
-seg : *image_evaluate.txt*　and　unc : *image_evaluate2.txt* 
-#　Directory structure and order: All code is inside program. When executing code make sure code and data folders are in the same path. 
-program -> README.md (this document)  -> crop(make data) -> model(BayesianUNet[keras_bcnn], <other model>) -> evaluation(segmentation, uncertainty) -> curriculum(method1　curriculum learning) -> entropy_loss(method2　Uncertainty loss)
+seg : *image_evaluate.txt*　and　unc : *image_evaluate2.txt*  
+#　Directory structure and order: All code is inside program. When executing code make sure code and data folders are in the same path.  
+program -> README.md (this document)  
+                |-> crop(make data)  
+                |-> model(BayesianUNet[keras_bcnn], <other model>)  
+                |-> evaluation(segmentation, uncertainty)  
+                |-> curriculum(method1　curriculum learning)  
+                |-> entropy_loss(method2　Uncertainty loss)
