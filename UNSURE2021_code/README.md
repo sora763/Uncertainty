@@ -51,9 +51,9 @@ seg : *image_evaluate.txt*　and　unc : *image_evaluate2.txt*
 #　Directory structure and order: All code is inside program. When executing code make sure code and data folders are in the same path.  
 <pre>
 program -> README.md (this document)  
-                |-> crop(make data)  
-                |-> model(BayesianUNet[keras_bcnn], <other model>)  
-                |-> evaluation(segmentation, uncertainty)  
-                |-> curriculum(method1　curriculum learning)  
-                |-> entropy_loss(method2　Uncertainty loss)
+        |-> crop(make data)  
+        |-> model(BayesianUNet[keras_bcnn], <other model>)  
+        |-> evaluation(segmentation, uncertainty)  
+        |-> curriculum(method1　curriculum learning)  
+        |-> entropy_loss(method2　Uncertainty loss)
 </pre>
